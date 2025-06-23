@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hi {{customerName}},</p>
+
+    <p>Here is your quotation:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each items}}
+        <tr>
+          <td>{{ItemName}}</td>
+          <td>{{Quantity}}</td>
+          <td>{{Price}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <p><strong>Total:</strong> {{total}}</p>
+
+    <p>Thank you!</p>
+  </body>
+</html>
